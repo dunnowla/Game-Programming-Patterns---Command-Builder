@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7tgbqcidkikr"]
+
+[ext_resource type="Script" uid="uid://nd7ok4xcrhgu" path="res://Scwipts/ItemUI.cs" id="1_5j4ht"]
+
+[node name="RandomThing" type="Node2D"]
+
+[node name="Chest" type="Button" parent="." node_paths=PackedStringArray("Chest")]
+offset_right = 190.0
+offset_bottom = 53.0
+text = "Chest"
+script = ExtResource("1_5j4ht")
+Chest = NodePath("../DisplayText")
+
+[node name="DisplayText" type="Label" parent="."]
+offset_left = 208.0
+offset_top = 1.0
+offset_right = 1269.0
+offset_bottom = 61.0

@@ -1,0 +1,169 @@
+[gd_scene load_steps=8 format=3 uid="uid://baa0gy4xwr36n"]
+
+[ext_resource type="Script" uid="uid://m3lj36m5dsqi" path="res://BoxThingaMajig.cs" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://nx8dduedlego" path="res://Box.tscn" id="2_uu6xs"]
+[ext_resource type="Script" uid="uid://fspdlskdxmkv" path="res://Scwipts/Box.cs" id="3_r0du0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxg2q"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_glv2v"]
+sky_material = SubResource("ProceduralSkyMaterial_rxg2q")
+
+[sub_resource type="Environment" id="Environment_uu6xs"]
+background_mode = 2
+sky = SubResource("Sky_glv2v")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rxg2q"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_uu6xs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_rxg2q")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.4999999, 0.8660253, 0, -0.8660253, 0.4999999, 0, 1.75, 1.5)
+
+[node name="Script" type="Node3D" parent="."]
+script = ExtResource("1_glv2v")
+
+[node name="Box" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box2" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box3" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box4" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, -0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box5" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, -0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box6" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box7" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box8" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box9" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box10" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box11" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box12" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box13" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box14" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box15" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box16" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box17" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box18" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box19" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box20" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box21" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box22" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box23" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box24" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, -0.4)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Box25" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, -0.8)
+script = ExtResource("3_r0du0")
+manager = NodePath("../Script")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 138.0
+offset_bottom = 45.0
+text = "UNDO"
+
+[connection signal="pressed" from="Button" to="Script" method="UndoButton"]

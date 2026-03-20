@@ -3,6 +3,6 @@ using System;
 
 public interface ICommands
 {
-	void Execute();
-	void Undo();
+	void Execute(); // Executes an action
+	void Undo(); // Undos an action
 }

@@ -9,7 +9,8 @@ public class Item
 	public float damage = 0;
 
 	public string CreateName()
-	{
+	{	
+		// Combines the values to make a string
 		string name = $"{prefix}{type}{suffix}";
 		return $"{name} (Damage: {damage:F1})";
 	}

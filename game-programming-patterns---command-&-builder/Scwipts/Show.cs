@@ -8,17 +8,17 @@ public partial class Show : ICommands
 
 	public Show(Node3D boxx)
 	{
-		box = boxx;
+		box = boxx; // says what box to affect
 	}
 
 	public void Execute()
 	{
-		box.GetNode<MeshInstance3D>("MeshInstance3D").Visible = true;
+		box.GetNode<MeshInstance3D>("MeshInstance3D").Visible = true; // Makes box visible
 	}
 
 	public void Undo()
 	{
-		box.GetNode<MeshInstance3D>("MeshInstance3D").Visible = false;
+		box.GetNode<MeshInstance3D>("MeshInstance3D").Visible = false; // Makes box invisible
 	}
 }
 

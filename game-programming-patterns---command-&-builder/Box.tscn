@@ -1,8 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://nx8dduedlego"]
+[gd_scene load_steps=4 format=3 uid="uid://nx8dduedlego"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6xnmj"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6xnmj"]
+transparency = 1
+diffuse_mode = 1
+albedo_color = Color(0.6873961, 0.4368037, 0.27732646, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_0bkxv"]
+material = SubResource("StandardMaterial3D_6xnmj")
 
 [node name="Box" type="StaticBody3D"]
 
